@@ -95,9 +95,31 @@ bool validate_brackets (string expr)
     return true;
 }
 
+bool validate_oprands_count (string expr)
+{
+    //note that this funcion is not 100% accurate. since it only counts .
+    //but the oprands will be validated again in the solving function automaticly as it uses a stack.
+    istringstream iss(expr);
+    int operator_count = 0;
+    int oprand_count  = 0;
+   do
+   {
+        string sub;
+        iss >> sub;
+        if (sub != "")
+        {
+            if(is_operator(sub)) operator_count ++;
+            else if (!is_bracket(sub)) oprand_count ++;
+        }
+    }while(iss);
+    return (oprand_count > operator_count);
+}
+
 string validate (string expr)
 {
-    if (validate_brackets(expr)) return expr;
+    return expr;
+    if (validate_brackets(expr) && validate_oprands_count(expr)) return expr;
+    // note that adding one & will call the two functions in the condition
     else return "";
 
 }
@@ -222,11 +244,20 @@ double solve(string rpn)
         }
         else
         {
+            double op1 ,op2;
+            if (!data.empty())
+            {
+                op2 = data.top();
+                data.pop();
+            }
+            else goto invalid;
 
-            double op2 = data.top();
-            data.pop();
-            double op1 = data.top();
-            data.pop();
+            if ( !data.empty())
+            {
+
+                op1 = data.top();
+                data.pop();
+            }else goto invalid;
 
             double result;
 
@@ -244,15 +275,22 @@ double solve(string rpn)
     }while(iss);
 
     return data.top();
+
+    invalid :
+    cout << "invalid parameters" << endl;
+    return 0;
+
 }
 
 int main()
 {
-    //string expr = "( 10.0 + 2 ) + ( 3 + 45 )";
-    //string expr = "5 + 10 - 1";
+//    string expr = "( 10.0 + 2 ) + ( 3 + 45 )";
+//    string expr = "5 + 10 - 1";
 //    string expr = "5-1/3/5*(1.5)";
-    string expr = "(7.5*2)/3 + 3 * (5/2)";
+//    string expr = "(7.5*2)/3 + 3 * (5/2)";
 //    string expr = "(())";
+
+    string expr = "1+-2-";
 
 
     validate_brackets(normalize(expr));
@@ -260,6 +298,9 @@ int main()
     cout << "Validated : " << validate(normalize(expr)) << endl;
     cout << "RPN : " << get_rpn(validate(normalize(expr))) << endl;
     cout << "result : " << solve(get_rpn(validate(normalize(expr)))) << endl;
+
+
+
 
     return 0;
 }

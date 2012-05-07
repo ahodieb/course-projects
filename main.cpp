@@ -40,29 +40,66 @@ int opr_order(string o)
 
 }
 
-string validate(string expr)
+string normalize(string expr)
 {
-    bool valid = false;
-    string valid_str = "";
-
-
+    string normalized_str;
     expr.erase(remove(expr.begin(), expr.end(), ' '), expr.end());
-
-    valid = true;
-    if(!valid) return "";
 
     for (string::size_type i = 0 ; i < expr.length(); i++)
     {
         char c = expr[i];
         char n = expr[i+1];
 
-        valid_str += c;
+        normalized_str += c;
         if ( (is_numircal(n) && !is_numircal(c)) || !is_numircal(n))
         {
-            valid_str += " ";
+            normalized_str += " ";
         }
     }
-    return valid_str;
+    return normalized_str;
+}
+
+bool validate_brackets (string expr)
+{
+    stack <string> br_stack;
+     istringstream iss(expr);
+
+    do
+    {
+         string sub;
+         iss >> sub;
+         if (sub != "")
+         {
+             if(is_bracket(sub))
+             {
+                 if(sub == "(")
+                 {
+                     br_stack.push("(");
+                 }
+                 else
+                 {
+                     if(!br_stack.empty())
+                     {
+                         br_stack.pop();
+                     }
+                     else
+                     {
+                         return false;
+                     }
+                 }
+             }
+         }
+
+    }while (iss);
+    if(!br_stack.empty()) return false;
+    return true;
+}
+
+string validate (string expr)
+{
+    if (validate_brackets(expr)) return expr;
+    else return "";
+
 }
 
 string get_rpn(string expr) // my implimentation of shunting-yard algorithm
@@ -209,18 +246,20 @@ double solve(string rpn)
     return data.top();
 }
 
-
 int main()
 {
     //string expr = "( 10.0 + 2 ) + ( 3 + 45 )";
     //string expr = "5 + 10 - 1";
 //    string expr = "5-1/3/5*(1.5)";
     string expr = "(7.5*2)/3 + 3 * (5/2)";
+//    string expr = "(())";
 
 
-    cout << "validated : "<< validate(expr) << endl;
-    cout << "RPN : " << get_rpn(validate(expr)) << endl;
-    cout << "result : " << solve(get_rpn(validate(expr))) << endl;
+    validate_brackets(normalize(expr));
+    cout << "Normalized : "<< normalize(expr) << endl;
+    cout << "Validated : " << validate(normalize(expr)) << endl;
+    cout << "RPN : " << get_rpn(validate(normalize(expr))) << endl;
+    cout << "result : " << solve(get_rpn(validate(normalize(expr)))) << endl;
 
     return 0;
 }

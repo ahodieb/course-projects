@@ -12,3 +12,6 @@ It was an assignment project for the Computing Systems Course as part of a large
 
 for more data : https://sites.google.com/site/drahmedakl2/courses2012/computing-system-513/Reverse-Polish-Notation-Project
 
+Project Report : https://docs.google.com/document/d/1MsuU_L54l3Ea9uMsLeoYwmTBtFdCe7nfY8mp21ZxNZE/edit
+
+Project Flow Chart : https://docs.google.com/drawings/d/1FRw2CK9cxshQ0tVcMk3bcA82apw310FxyQosWQ1zHwI/edit

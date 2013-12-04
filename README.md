@@ -1,13 +1,16 @@
 #Reverse Polish Notation project
 
+
 Simple C++ application to solve arithmetic expressions , with an implementation to shunting-yard algorithm .
 
 It was an assignment project for the Computing Systems Course as part of a larger project to demonstrate the several stages inside a computer to perform calculations and logic.
 
 Using Standard C++ library and data structures.
 Supporting double values.
-it dousent support -ve values.
+it dosen't support -ve values.
 
+
+##Reimplmentation of the same project in python , will be the core for a GUI to show the steps.
 
 ## Extra Data:
 * [Project Requirments][1] 

@@ -15,13 +15,13 @@ instructions = { i.split()[0]:i.split()[2] for i in open('instruction_set.txt').
 # ex1 = r'^\s*(\w{0,3})\s*\,\s*(DEC|HEX)\s*([-+]?\w+)\s*\/?.*?'
 # ex1 = r'^\s*(\w{0,3})\s*\,\s*' + keywords + '\s*([-+]?\w+)\s*\/?.*?'
 
-ex = r'^\s*?(\w{0,3}?)\s*\,?\s*?' + keywords + '\s*?([-+]?\w+?)\s*?(I)?\s*\/?.*?'
+ex = r'^\s*(\w{0,3}?)\s*\,?\s*' + keywords + '\s*([-+]?\w+)\s*(I)?\s*\/?.*?'
 
 asm = open(args.asm_files[0]).readlines()
 
-for i in range(len(asm)):
-	print i+1,
-	m = re.match(ex,asm[i])
+for l in enumerate(asm, start=0):
+	print l[0]+1,
+	m = re.match(ex,l[1])
 	if m:
 		print m.span(),
 		print m.groups(),

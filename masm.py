@@ -15,13 +15,31 @@ instructions = { i.split()[0]:i.split()[2] for i in open('instruction_set.txt').
 # ex1 = r'^\s*(\w{0,3})\s*\,\s*(DEC|HEX)\s*([-+]?\w+)\s*\/?.*?'
 # ex1 = r'^\s*(\w{0,3})\s*\,\s*' + keywords + '\s*([-+]?\w+)\s*\/?.*?'
 
-ex = r'^\s*(\w{0,3}?)\s*\,?\s*' + keywords + '\s*([-+]?\w+)\s*(I)?\s*\/?.*?'
+#symbols
+ex0 = r'^\s*(\w{0,3}?)\s*\,?\s*(ORG)\s*(\d+)\s*\/?.*?'
+ex1 = r'^\s*(\w{0,3})\s*\,\s*' + keywords + '\s*([-+]?\w+)\s*(I)?\s*\/?.*?'
 
 asm = open(args.asm_files[0]).readlines()
 
-for l in enumerate(asm, start=0):
+symbol_table = {}
+errors = [] #{'msg':'error message','line':3}
+
+
+address_thresh = 0
+#getting threshhold
+for l in enumerate(asm):
+	m = re.match(ex0,l[1])
+	if m :
+		print m.span(),
+		print m.groups()
+		addres_thresh = int(m.groups()[2])
+
+print addres_thresh
+
+#pass 1 
+for l in enumerate(asm):
 	print l[0]+1,
-	m = re.match(ex,l[1])
+	m = re.match(ex1,l[1])
 	if m:
 		print m.span(),
 		print m.groups(),

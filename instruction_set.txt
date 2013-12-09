@@ -24,3 +24,9 @@ SKO , F100   , Skip if output flag is on
 ION , F080   , Turn interrupt on
 IOF , F040   , Turn interrupt off
 
+
+ORG          
+DEC
+HEX
+END
+

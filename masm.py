@@ -9,3 +9,6 @@ parser = argparse.ArgumentParser(prog='masm.py',description='Assembler for mano 
 parser.add_argument('asm_files',nargs='+', help='file name(s)')
 args = parser.parse_args()
 
+
+ex1 = r'^\s*(\w{0,3})\s*\,\s*(DEC|HEX)\s*([-+]?\w+)\s*\/(.*)'
+

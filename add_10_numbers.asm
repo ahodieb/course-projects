@@ -13,9 +13,9 @@ PTR,HEX 0
 NBR,DEC -10          / 10 operands
 CTR,HEX 0
 SUM,HEX 0
-	ORG 150
-	DEC 75
-	DEC 30
+	ORG 150			
+DTA,DEC 75			/just for testing
+DTA,DEC 30
 	DEC 50
 	DEC 40
 	DEC 10

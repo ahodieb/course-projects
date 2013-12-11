@@ -20,7 +20,8 @@ instructions = { i.split()[0]:i.split()[2] for i in open('instruction_set.txt').
 
 #symbols
 ex0 = r'^\s*(\w{0,3}?)\s*\,?\s*(ORG)\s*(\d+)\s*(\/?.*)'
-ex1 = r'^\s*(\w{0,3})\s*\,\s*' + keywords + '\s*([-+]?\w+)\s*(I)?\s*(\/?.*)'
+ex1 = r'^\s*(\w{0,3})\s*\,\s*' + keywords + '\s*([-+]?\w*)\s*(I)?\s*(\/?.*)'
+# ex1 = r'^\s*(\w{0,3})\s*\,\s*' + keywords + '\s*([-+]?\w+)\s*(I)?\s*(\/?.*)'
 
 asm = open(args.asm_files[0]).readlines()
 
@@ -28,15 +29,18 @@ symbol_table = {}
 errors = [] #{'msg':'error message','line':3}
 
 
+##pass one
 address_offset = 0
+address_start  = 0
 #getting threshhold
 for l in enumerate(asm):
 	m = re.match(ex0,l[1])
 	if m :
 		logging.debug( 'ORG found')
-		logging.debug('span:{0}'.format(m.span()) )
+		logging.debug( 'span:{0}'.format(m.span()) )
 		logging.debug( 'line:{0}'.format(m.groups()) )
 
+		address_start = l[0]
 		address_offset = int(m.groups()[2])
 		logging.info('Address offset changed: {0}'.format(address_offset))
 
@@ -45,15 +49,30 @@ for l in enumerate(asm):
 		logging.debug('span:{0}'.format(m.span()) )
 		logging.debug( 'line:{0}'.format(m.groups()) )
 		lable = m.groups()[0]
+
 		if lable in symbol_table.keys():
 			logging.info('Error in line :{0}, the same lable "{1}" was used before.'.format(l[0]+1,lable))
 			errors.append({'msg':'same lable used bfore','line':l[0]+1,'code':'SMLBL','extra':lable})
 			continue
-		symbol_table[lable] = l[0] + address_offset
+		logging.info('{0} was added to symbol table.'.format(lable) )
+
+		symbol_table[lable] = l[0] + address_offset - address_start
 
 
-print symbol_table
-print errors
+#Second Pass
+for l in enumerate(asm):
+	m = re.match(ex1,l[1])
+
+	if m:
+		logging.debug('span:{0}'.format(m.span()) )
+		logging.debug( 'line:{0}'.format(m.groups()) )
+		lable = m.groups()[0]
+
+		if lable in symbol_table.keys():
+			logging.info('Error in line :{0}, the same lable "{1}" was used before.'.format(l[0]+1,lable))
+			errors.append({'msg':'same lable used bfore','line':l[0]+1,'code':'SMLBL','extra':lable})
+			continue
+		logging.info('{0} was added to symbol table.'.format(lable) )
 
 
 # print address_offset
@@ -71,3 +90,9 @@ print errors
 
 
 
+print 'Symbol','\t','Address'
+for k in sorted(symbol_table,key=lambda n:symbol_table[n]):
+	print k,'\t',symbol_table[k]
+
+# print symbol_table
+print errors

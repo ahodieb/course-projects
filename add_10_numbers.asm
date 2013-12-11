@@ -1,7 +1,7 @@
 	ORG 100 		/Origin of program is HEX 100
 	LDA ADS
 	STA PTR
-	CLA
+CLZ,CLA
 LOP,ADD PTR I
 	ISZ PTR
 	ISZ CTR

@@ -9,8 +9,9 @@ Using Standard C++ library and data structures.
 Supporting double values.
 it dosen't support -ve values.
 
+--
 
-##Reimplmentation of the same project in python , will be the core for a GUI to show the steps.
+A re-implmentation of the same project in python was made for another course ( Advanced Computer Architecture ).
 
 ## Extra Data:
 * [Project Requirments][1] 

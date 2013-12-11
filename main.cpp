@@ -15,7 +15,6 @@ bool is_numircal(char c)
     return (c >='0' && c <='9') || (c == '.');
 }
 
-
 bool is_operator(string o)
 {
     bool result = false;
@@ -28,21 +27,12 @@ bool is_operator(string o)
     return result;
 }
 
-
 bool is_bracket(string o)
 {
     return ((o[0] == '(') || (o[0] == ')'));
 }
 
-int opr_order(string o)void write_to_file(string data,const char* file_name)
-{
-    ofstream f;
-    f.open(file_name, ios::app);
-    f << data << "\n";
-    f.flush();
-    f.close();
-}
-
+int opr_order(string o)
 {
     if (o == "+" || o == "-") return 0;
     if (o == "*" || o == "/" || o == "%") return 1;
@@ -297,10 +287,10 @@ int main()
 //    string expr = "( 10.0 + 2 ) + ( 3 + 45 )";
 //    string expr = "5 + 10 - 1";
 //    string expr = "5-1/3/5*(1.5)";
-//    string expr = "(7.5*2)/3 + 3 * (5/2)";
+   string expr = "(7.5*2)/3 + 3 * (5/2.0)";
 //    string expr = "(())";
 
-    string expr = "1+-2-";
+    // string expr = "1+-2-";
 
 
     validate_brackets(normalize(expr));
@@ -314,4 +304,3 @@ int main()
 
     return 0;
 }
-

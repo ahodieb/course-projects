@@ -6,7 +6,8 @@
 import argparse,re
 import logging
 
-logging.basicConfig(level='INFO')
+# logging.basicConfig(level='INFO')
+logging.basicConfig(format='%(message)s',level='INFO')
 
 parser = argparse.ArgumentParser(prog='masm.py',description='Assembler for mano machine instruction set.')
 parser.add_argument('asm_files',nargs='+', help='file name(s)')
@@ -84,8 +85,22 @@ for l in enumerate(asm):
 		logging.debug('span:{0}'.format(m.span()) )
 		logging.info( 'line:{0}'.format(m.groups()) )
 		instruction = m.groups()[1]
+
 		if instruction in instruction_set.keys():
-			program[adrr] = {'instruction':instruction,'operand':m.groups()[2]}
+
+			n = instruction_set[instruction]
+			if n >=0 and n < 7 : #memory refrance instruction
+				pass
+
+			elif n >=7001 and n <= 7800: #register instruction
+				pass
+			else:
+				pass
+
+			program[adrr] = {'instruction':instruction,'operand':m.groups()[2],'bin':bin(int(n))[2:],'hex':hex(int(n))[2:]}
+	
+		elif instruction in {'DEC','HEX','END'}:
+			pass
 		else:
 			logging.info('line error at line {0}'.format(l[0]))
 
@@ -113,11 +128,13 @@ for k in sorted(symbol_table,key=lambda n:symbol_table[n]):
 	print k,'\t',symbol_table[k]
 
 
-print 'Address\t','Instruction\t','Operand\t'
+print 'Address\t','Instruction\t','Operand\t','Binary\t','Hex\t'
 for k in sorted(program):
 	print k,'\t',
 	print program[k]['instruction'],'\t'*2,
 	print program[k]['operand'],'\t',
+	print program[k]['bin'],'\t',
+	print program[k]['hex'],'\t',
 	print
 
 

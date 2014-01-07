@@ -6,7 +6,7 @@
 import argparse,re
 import logging
 
-# logging.basicConfig(level='INFO')
+logging.basicConfig(level='INFO')
 logging.basicConfig(format='%(message)s',level='INFO')
 
 parser = argparse.ArgumentParser(prog='masm.py',description='Assembler for mano machine instruction set.')
@@ -15,9 +15,6 @@ args = parser.parse_args()
 
 keywords = '(' + '|'.join([ i.split()[0] for i in open('instruction_set.txt').readlines() if i.split()]) + ')'
 instruction_set = { i.split()[0]:i.split()[2] for i in open('instruction_set.txt').readlines() if len(i.split()) >1 }
-
-# ex1 = r'^\s*(\w{0,3})\s*\,\s*(DEC|HEX)\s*([-+]?\w+)\s*\/?.*?'
-# ex1 = r'^\s*(\w{0,3})\s*\,\s*' + keywords + '\s*([-+]?\w+)\s*\/?.*?'
 
 #symbols
 ex0 = r'^\s*(\w{0,3}?)\s*\,?\s*(ORG)\s*(\d+)\s*(\/?.*)'
@@ -43,7 +40,7 @@ for l in enumerate(asm):
 		logging.debug( 'line:{0}'.format(m.groups()) )
 
 		address_start = l[0]
-		address_offset = int(m.groups()[2])
+		address_offset = int(m.groups()[2])-1
 		logging.info('Address offset changed: {0}'.format(address_offset))
 
 	m = re.match(ex1,l[1])
@@ -55,6 +52,11 @@ for l in enumerate(asm):
 		if lable in symbol_table.keys():
 			logging.info('Error in line :{0}, the same lable "{1}" was used before.'.format(l[0]+1,lable))
 			errors.append({'msg':'same lable used bfore','line':l[0]+1,'code':'SMLBL','extra':lable})
+			continue
+
+		if lable == '':
+			logging.info('Error in line :{0}, lable expected "{1}".'.format(l[0]+1,lable))
+			errors.append({'msg':'missing lable before , ','line':l[0]+1,'code':'MSLBL','extra':''})
 			continue
 		logging.info('{0} was added to symbol table.'.format(lable) )
 
@@ -74,7 +76,7 @@ for l in enumerate(asm):
 		logging.debug( 'line:{0}'.format(m.groups()) )
 
 		address_start = l[0]
-		address_offset = int(m.groups()[2])
+		address_offset = int(m.groups()[2])-1
 		logging.info('Address offset changed: {0}'.format(address_offset))
 		continue
 
@@ -88,38 +90,46 @@ for l in enumerate(asm):
 
 		if instruction in instruction_set.keys():
 
-			n = instruction_set[instruction]
-			if n >=0 and n < 7 : #memory refrance instruction
-				pass
+			n = int(instruction_set[instruction],16)
 
-			elif n >=7001 and n <= 7800: #register instruction
+
+			if n >= 0 and n < 7 : #memory refrance instruction_set
+				if m.groups()[3] == 'I':
+					n+=7
+
+				n = int(str(n*1000 + symbol_table[m.groups()[2]]),16)
+
+
+
+
+			elif n >=int('7001',16) and n <= int('7800',16): #register instruction
 				pass
+			
+			elif n >=int('F040',16) and n <= int('F800',16): #register instruction
+				pass
+			
 			else:
 				pass
 
-			program[adrr] = {'instruction':instruction,'operand':m.groups()[2],'bin':bin(int(n))[2:],'hex':hex(int(n))[2:]}
+			program[adrr] = {'instruction':instruction,'operand':m.groups()[2],'bin':bin(n)[2:],'hex':hex(n)[2:]}
 	
 		elif instruction in {'DEC','HEX','END'}:
-			pass
+			if instruction == 'DEC' : 
+				n = int(m.groups()[2])
+				if n < 0:
+					n = 65536 + n +1
+			elif instruction == 'HEX':
+				n = int(m.groups()[2],16)
+
 		else:
-			logging.info('line error at line {0}'.format(l[0]))
+			logging.info('Error in line :{0}, Unknown Instruction "{1}".'.format(l[0]+1,instruction))
+			errors.append({'msg':'unknown instruction , ','line':l[0]+1,'code':'UKINS','extra':instruction})
+			
 
 	else:
-		logging.info('line error at line {0}'.format(l[0]))
-
-
-# print address_offset
-
-# #pass 1 
-# for l in enumerate(asm):
-# 	print l[0]+1,
-# 	m = re.match(ex1,l[1])
-# 	if m:
-# 		print m.span(),
-# 		print m.groups(),
-# 	else :
-# 		print 'error',
-# 	print ''
+		logging.info('Error in line :{0}, Unknown Instruction "{1}".'.format(l[0]+1,l[1]) )
+		errors.append({'msg':'unknown instruction ','line':l[0]+1,'code':'UKINS','extra':l[1]})
+		
 
 
 
@@ -128,15 +138,16 @@ for k in sorted(symbol_table,key=lambda n:symbol_table[n]):
 	print k,'\t',symbol_table[k]
 
 
-print 'Address\t','Instruction\t','Operand\t','Binary\t','Hex\t'
+print 'Address\t','Hex\t','Binary\t','\t','\t','Instruction\t','Operand\t'
 for k in sorted(program):
-	print k,'\t',
+	print k,'\t',	
+	print program[k]['hex'].zfill(4).upper(),'\t',	
+	print program[k]['bin'].zfill(16),'\t',
 	print program[k]['instruction'],'\t'*2,
 	print program[k]['operand'],'\t',
-	print program[k]['bin'],'\t',
-	print program[k]['hex'],'\t',
-	print
+	print ''
 
+print ''
 
 print errors
 print keywords

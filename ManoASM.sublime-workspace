@@ -1,0 +1,1011 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"geta",
+				"get_access_token_from_code"
+			],
+			[
+				"aut",
+				"auth_url"
+			],
+			[
+				"login",
+				"login_required"
+			],
+			[
+				"app",
+				"app_sec"
+			],
+			[
+				"fb",
+				"fb_app_id"
+			],
+			[
+				"access",
+				"access_token"
+			],
+			[
+				"ajax",
+				"ajaxsetup	$.ajaxSetup()"
+			],
+			[
+				"H",
+				"H1	Tag"
+			],
+			[
+				"context",
+				"context"
+			],
+			[
+				"n",
+				"numbers"
+			],
+			[
+				"max",
+				"max_range"
+			],
+			[
+				"cah",
+				"cache_1"
+			],
+			[
+				"ca",
+				"cache_1"
+			],
+			[
+				"lines",
+				"lines_2"
+			],
+			[
+				"r",
+				"readline"
+			],
+			[
+				"inst",
+				"instruction_set"
+			],
+			[
+				"instr",
+				"instruction"
+			],
+			[
+				"res",
+				"result_stack"
+			],
+			[
+				"re",
+				"result_stack"
+			],
+			[
+				"print",
+				"print_mat"
+			],
+			[
+				"add",
+				"add_mat"
+			],
+			[
+				"read",
+				"read_mat"
+			],
+			[
+				"c",
+				"c_size"
+			],
+			[
+				"sym",
+				"symbol_table"
+			],
+			[
+				"sy",
+				"symbol_table"
+			],
+			[
+				"addre",
+				"address_start"
+			],
+			[
+				"asm",
+				"asm_files"
+			],
+			[
+				"co",
+				"country"
+			],
+			[
+				"ru",
+				"ruler"
+			],
+			[
+				"the",
+				"theta"
+			],
+			[
+				"qu",
+				"quiz_questions"
+			],
+			[
+				"qui",
+				"quiz_name"
+			],
+			[
+				"op",
+				"operands"
+			],
+			[
+				"data",
+				"data_type"
+			],
+			[
+				"wr",
+				"writelines"
+			],
+			[
+				"qi",
+				"quiz_name"
+			],
+			[
+				"he",
+				"hex_examples"
+			],
+			[
+				"oct",
+				"oct_examples"
+			],
+			[
+				"bin",
+				"bin_examples"
+			],
+			[
+				"floa",
+				"float_examples"
+			],
+			[
+				"to_",
+				"to_dec_float"
+			],
+			[
+				"dec",
+				"decimal_examples"
+			],
+			[
+				"break",
+				"break	keyword"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"poi",
+				"position"
+			],
+			[
+				"sum",
+				"sum_of_abundants"
+			],
+			[
+				"is",
+				"is_aband_sum"
+			],
+			[
+				"start",
+				"start_time"
+			],
+			[
+				"dat",
+				"data"
+			],
+			[
+				"isP",
+				"is_prime"
+			],
+			[
+				"email",
+				"email_list"
+			],
+			[
+				"fin",
+				"finished"
+			],
+			[
+				"array",
+				"arrays"
+			],
+			[
+				"file",
+				"file_contents"
+			],
+			[
+				"text",
+				"text_files"
+			],
+			[
+				"valu",
+				"values"
+			],
+			[
+				"list",
+				"listlist2mat"
+			],
+			[
+				"mat",
+				"matutil"
+			],
+			[
+				"F",
+				"False"
+			],
+			[
+				"im",
+				"import"
+			],
+			[
+				"iter",
+				"itertools"
+			],
+			[
+				"v",
+				"vecdict"
+			],
+			[
+				"vec",
+				"veclist"
+			],
+			[
+				"sen",
+				"sen_set"
+			],
+			[
+				"creat",
+				"create_voting_dict"
+			],
+			[
+				"find",
+				"find_average_record"
+			],
+			[
+				"se",
+				"sen_b"
+			],
+			[
+				"vo",
+				"voting_dict"
+			],
+			[
+				"poli",
+				"policy_compare"
+			],
+			[
+				"vot",
+				"voting_dict"
+			],
+			[
+				"sca",
+				"scalar_mul"
+			],
+			[
+				"pla",
+				"players"
+			],
+			[
+				"cards",
+				"cards_played"
+			],
+			[
+				"players",
+				"players_data"
+			],
+			[
+				"play",
+				"players_data"
+			],
+			[
+				"room",
+				"room2_light"
+			],
+			[
+				"room1",
+				"room1_temperature"
+			],
+			[
+				"ap",
+				"append"
+			],
+			[
+				"ser",
+				"serial_thread"
+			],
+			[
+				"updat",
+				"update_datastream"
+			],
+			[
+				"cur",
+				"current_value"
+			],
+			[
+				"con",
+				"connections"
+			],
+			[
+				"rou",
+				"router"
+			],
+			[
+				"buffe",
+				"buffer"
+			],
+			[
+				"bu",
+				"buffer"
+			],
+			[
+				"buffer",
+				"buffer_writer"
+			],
+			[
+				"router",
+				"router_thread"
+			],
+			[
+				"imp",
+				"import	(keyword, instance)"
+			],
+			[
+				"thread",
+				"threading  (module)"
+			],
+			[
+				"q",
+				"quick_find_example"
+			],
+			[
+				"Qu",
+				"QuickFindUF"
+			],
+			[
+				"money",
+				"money_invested"
+			],
+			[
+				"day",
+				"days_on_system"
+			],
+			[
+				"inve",
+				"investment_history"
+			],
+			[
+				"balance",
+				"balance"
+			],
+			[
+				"ex",
+				"ex_amount"
+			],
+			[
+				"operati",
+				"operation_type"
+			],
+			[
+				"broker",
+				"broker"
+			],
+			[
+				"Op",
+				"Operation"
+			],
+			[
+				"defau",
+				"default=0"
+			],
+			[
+				"exc",
+				"excecute_sqls"
+			],
+			[
+				"In",
+				"INSERT"
+			],
+			[
+				"balanc",
+				"balance_left"
+			],
+			[
+				"my_",
+				"my_manager  (module)"
+			],
+			[
+				"exchang",
+				"exchange_rate"
+			],
+			[
+				"exch",
+				"exchange_rate"
+			],
+			[
+				"Depo",
+				"Deposit"
+			],
+			[
+				"new",
+				"new_amount"
+			],
+			[
+				"old_",
+				"old_instance"
+			],
+			[
+				"old",
+				"old_instance"
+			],
+			[
+				"Dep",
+				"Deposit"
+			],
+			[
+				"pre",
+				"pre_save"
+			],
+			[
+				"class",
+				"classmethod	(builtin, class)"
+			],
+			[
+				"my",
+				"my_manager  (module)"
+			],
+			[
+				"DE",
+				"DEBUG"
+			],
+			[
+				"withdr",
+				"withdrowals"
+			],
+			[
+				"dep",
+				"deposits"
+			],
+			[
+				"oper",
+				"operation_type"
+			],
+			[
+				"opera",
+				"operation_type"
+			],
+			[
+				"depo",
+				"deposit_history"
+			],
+			[
+				"ope",
+				"operation_type='Withdrowal"
+			],
+			[
+				"Flo",
+				"FloatField"
+			],
+			[
+				"date",
+				"datetime"
+			],
+			[
+				"blank",
+				"blank=True"
+			],
+			[
+				"null",
+				"null=True"
+			],
+			[
+				"d",
+				"datetime  (class)"
+			],
+			[
+				"da",
+				"datetime  (class)"
+			],
+			[
+				"fri",
+				"fridays"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "Packages/User/Python-External.sublime-build",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"jque",
+				"Snippet: jQuery(document).ready"
+			],
+			[
+				"set Syntax:dj",
+				"Set Syntax: HTML (Django)"
+			],
+			[
+				"set syn",
+				"Set Syntax: HTML"
+			],
+			[
+				"set syntax h",
+				"Set Syntax: HTML"
+			],
+			[
+				"git",
+				"Git: Status"
+			],
+			[
+				"markdown",
+				"Markdown Preview: Python Markdown: Preview in Browser"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"mark",
+				"Set Syntax: Markdown"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"Snippet: #",
+				"Snippet: #!/usr/bin/env"
+			],
+			[
+				"git cus",
+				"Git: Custom Command"
+			],
+			[
+				"git ad",
+				"Git: Custom Command"
+			],
+			[
+				"git c",
+				"Git: Commit"
+			],
+			[
+				"snip",
+				"Snippet: #!/usr/bin/env"
+			],
+			[
+				"bash",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"Snippet: break",
+				"Snippet: python_breakpoint"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"snipp deb",
+				"Snippet: ipdb debug tool"
+			],
+			[
+				"cancel",
+				"Build: Cancel"
+			],
+			[
+				"bu",
+				"Build: Cancel"
+			],
+			[
+				"build",
+				"Build: Build"
+			],
+			[
+				"REMOVE PA",
+				"Package Control: Remove Package"
+			],
+			[
+				"remve p",
+				"Package Control: Remove Package"
+			],
+			[
+				"install p",
+				"Package Control: Install Package"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Remove Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 555.0
+	},
+	"console":
+	{
+		"height": 280.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/the-nightphoenix/Downloads/project.py",
+		"/home/the-nightphoenix/Development/django/dj.abdallahhodieb.com/fb_scraper/settings.py",
+		"/home/the-nightphoenix/Development/django/dj.abdallahhodieb.com/templates/scraper/base.html",
+		"/home/the-nightphoenix/Development/django/dj.abdallahhodieb.com/templates/scraper/index.html",
+		"/home/the-nightphoenix/Development/django/dj.abdallahhodieb.com/scraper/views.py",
+		"/home/the-nightphoenix/Development/django/dj.abdallahhodieb.com/fb_scraper/urls.py",
+		"/home/the-nightphoenix/Development/django/dj.abdallahhodieb.com/static/scraper/bootstrap/index.html",
+		"/home/the-nightphoenix/Development/django/dj.abdallahhodieb.com/static/scraper/bootstrap/styles.css",
+		"/home/the-nightphoenix/Development/django/dj.abdallahhodieb.com/static/scraper/bootstrap/js/fb.js",
+		"/home/the-nightphoenix/Development/django/dj.abdallahhodieb.com/templates/scraper/index3.html",
+		"/home/the-nightphoenix/Development/django/dj.abdallahhodieb.com/templates/scraper/index2.html",
+		"/home/the-nightphoenix/Development/django/dj.abdallahhodieb.com/static/scraper/bootstrap/css/style.css",
+		"/home/the-nightphoenix/Development/django/dj.abdallahhodieb.com/scraper/models.py",
+		"/home/the-nightphoenix/Development/django/dj.abdallahhodieb.com/pull.sh",
+		"/home/the-nightphoenix/Development/django/dj.abdallahhodieb.com/scraper/pull.sh",
+		"/home/the-nightphoenix/Dropbox/Problem Solving/SPOJ/Fashion Shows - FASHION.py",
+		"/home/the-nightphoenix/Dropbox/Problem Solving/SPOJ/To and Fro - TOANDFRO.py",
+		"/home/the-nightphoenix/Dropbox/Problem Solving/SPOJ/RPN - Transform the Expression ONP.py",
+		"/home/the-nightphoenix/Desktop/rpn.py",
+		"/home/the-nightphoenix/Dropbox/Problem Solving/Google Code Jam/EuroPython 2011/Music Collection/music_collection.py",
+		"/home/the-nightphoenix/Dropbox/Problem Solving/Brilliant/Palindromic Substrings/pal.py",
+		"/media/MyFiles/Dropbox/Problem Solving/Facebook/input004.txt",
+		"/home/the-nightphoenix/PycharmProjects/PyProject/test.py",
+		"/home/the-nightphoenix/Dropbox/Problem Solving/Facebook/substrings.py",
+		"/home/the-nightphoenix/Dropbox/Problem Solving/Facebook/subs_2.py",
+		"/home/the-nightphoenix/.cache/.fr-YVuHyS/input004.txt",
+		"/home/the-nightphoenix/.cache/.fr-jhgTnY/input005.txt",
+		"/home/the-nightphoenix/.cache/.fr-EfhKIE/output005.txt",
+		"/home/the-nightphoenix/.cache/.fr-5psPaC/output004.txt",
+		"/home/the-nightphoenix/.cache/.fr-xSVeNL/output000.txt",
+		"/media/MyFiles/Dropbox/Problem Solving/Facebook/substrings.py",
+		"/media/MyFiles/Dropbox/CERN.txt",
+		"/home/the-nightphoenix/Dropbox/Problem Solving/Project Euler/ProjectEuler.py",
+		"/home/the-nightphoenix/Dropbox/Problem Solving/Brilliant/OddCounter/counter.py",
+		"/home/the-nightphoenix/Desktop/abdallahhodieb.com/public_html/index.html",
+		"/home/the-nightphoenix/Desktop/CERN.txt",
+		"/home/the-nightphoenix/Desktop/Untitled Folder/DataStructures/README.md",
+		"/media/MyFiles/Games/Serial.txt",
+		"/home/the-nightphoenix/Development/C#/Projects/Data BackUp/BackUpCopyer/Main.cs",
+		"/home/the-nightphoenix/Development/C#/College/Advanced Programming/7th Week Exam/7th Week Exam/Program.cs",
+		"/home/the-nightphoenix/Desktop/Untitled Folder/Data Structures/C++/Bin Sorting/random_generator.cpp",
+		"/home/the-nightphoenix/Desktop/Untitled Folder/Data Structures/C++/Bin Sorting/x.txt",
+		"/media/MyFiles/Development/C++/Linked Lists/main.cpp",
+		"/home/the-nightphoenix/Desktop/Untitled Folder/Data Structures/C++/Binary Search Tree/main.cpp",
+		"/media/MyFiles/Development/C++/Linked Lists/libs.h",
+		"/media/MyFiles/Development/C++/Linked Lists/LinkedLists.h",
+		"/media/MyFiles/Development/C++/College Projects/Hot Potato/main.cpp",
+		"/media/MyFiles/Games/Typing of the Dead/Serial.txt",
+		"/home/the-nightphoenix/Desktop/Brilliant/level_5.py",
+		"/home/the-nightphoenix/Desktop/Brilliant/numbers.txt",
+		"/home/the-nightphoenix/Dropbox/Problem Solving/Project Euler/problem_56.py",
+		"/home/the-nightphoenix/Desktop/sudoku_solver/sudoku_solver.py",
+		"/home/the-nightphoenix/Desktop/sudoku_solver/grid1.txt",
+		"/home/the-nightphoenix/Desktop/sudoku_solver/grids.txt",
+		"/home/the-nightphoenix/Downloads/Deduct.java",
+		"/home/the-nightphoenix/Downloads/DeductSpace.java",
+		"/home/the-nightphoenix/Desktop/red.py",
+		"/media/MyFiles/Dropbox/Problem Solving/Unsolved/Tips.md",
+		"/media/MyFiles/Dropbox/Problem Solving/Unsolved/primes.txt",
+		"/media/MyFiles/Dropbox/Problem Solving/Unsolved/area_of_triangle.py",
+		"/home/the-nightphoenix/Downloads/DeductClient.java",
+		"/media/MyFiles/Dropbox/Problem Solving/Unsolved/primes.py",
+		"/home/the-nightphoenix/Desktop/problem_92.py",
+		"/home/the-nightphoenix/Desktop/tri.txt",
+		"/home/the-nightphoenix/Desktop/problem_18_67.py",
+		"/media/MyFiles/Dropbox/Problem Solving/Project Euler/ProjectEuler.py",
+		"/home/the-nightphoenix/Desktop/ManoAssembler/editor.py",
+		"/home/the-nightphoenix/Desktop/ManoAssembler/README.md",
+		"/home/the-nightphoenix/Desktop/ManoAssembler/add_two_numbers.asm",
+		"/home/the-nightphoenix/Desktop/ManoAssembler/instruction_set.txt",
+		"/home/the-nightphoenix/Desktop/ManoAssembler/masm.py",
+		"/home/the-nightphoenix/Downloads/Advanced Computation Study Plan.txt",
+		"/home/the-nightphoenix/Desktop/ManoAssembler/add_10_numbers.asm",
+		"/home/the-nightphoenix/Dropbox/Problem Solving/Wargames/Vortex/vortex0/vortex0/bin/Debug/data.txt",
+		"/home/the-nightphoenix/Downloads/Advanced Computation Study Plan.mm",
+		"/home/the-nightphoenix/Desktop/AAST Classes/AdvancedProgramming/README.md",
+		"/home/the-nightphoenix/Desktop/AAST Classes/AdvancedProgramming/week12/README.md",
+		"/home/the-nightphoenix/Desktop/AAST Classes/AdvancedProgramming/week12/map.png",
+		"/home/the-nightphoenix/Downloads/recipe-218332-1.py",
+		"/home/the-nightphoenix/Downloads/MultiplicativeOrder.nb",
+		"/home/the-nightphoenix/Downloads/index.html",
+		"/home/the-nightphoenix/Desktop/sort_strings.py",
+		"/home/the-nightphoenix/Desktop/bin_div_by_3.split(',",
+		"/home/the-nightphoenix/Desktop/div_by_7.py",
+		"/home/the-nightphoenix/Desktop/2d_arrays_.py",
+		"/home/the-nightphoenix/Desktop/greatest_n.py",
+		"/home/the-nightphoenix/Desktop/quantty.py",
+		"/home/the-nightphoenix/Desktop/rgb_to_hex.py",
+		"/home/the-nightphoenix/Desktop/pass.py",
+		"/home/the-nightphoenix/Desktop/bank.py",
+		"/home/the-nightphoenix/Desktop/bill.py",
+		"/home/the-nightphoenix/Dropbox/AAST - Work/Programing Applications/Quiz_3/mohamed mostafa mohamed 12105851.txt",
+		"/home/the-nightphoenix/Desktop/quizes/New folder/mohamed mostafa mohamed 12105851.txt",
+		"/home/the-nightphoenix/Desktop/quizes/New folder/micheal medhat 1104654.cpp",
+		"/home/the-nightphoenix/Desktop/quizes/New folder/Mohamed Essam Hassan 12104555.cpp",
+		"/home/the-nightphoenix/Desktop/quizes/New folder/Mohamed Essam Hassan 12104555.txt",
+		"/home/the-nightphoenix/Desktop/quizes/New folder/mario_11104488.cpp",
+		"/home/the-nightphoenix/Dropbox/AAST - Work/Programing Applications/Quiz_3/Cheating",
+		"/home/the-nightphoenix/Desktop/quizes/New folder/Haitham mohamed 12104407.cpp",
+		"/home/the-nightphoenix/Dropbox/AAST - Work/Programing Applications/Quiz_3/ahmed_helmy_11104521.cpp",
+		"/home/the-nightphoenix/Desktop/chain.py",
+		"/home/the-nightphoenix/Desktop/pyglet_test.py",
+		"/media/PHOENIX USB/New folder/abdul_rahman_moh_12106797.c",
+		"/home/the-nightphoenix/Desktop/quizes/New folder/ahmed_helmy_11104521.cpp",
+		"/home/the-nightphoenix/Desktop/quizes/New folder/ahmed helmy 11104521.cpp",
+		"/home/the-nightphoenix/Desktop/ReversePolishNotation/README.md",
+		"/home/the-nightphoenix/Desktop/Untitled Document",
+		"/home/the-nightphoenix/Desktop/ReversePolishNotation/rpn.py",
+		"/home/the-nightphoenix/Desktop/ReversePolishNotation/main.cpp",
+		"/home/the-nightphoenix/Desktop/ReversePolishNotation/rpn_python.py",
+		"/home/the-nightphoenix/Desktop/ReversePolishNotation/stack_dump.txt",
+		"/home/the-nightphoenix/Desktop/AAST Classes/ProgrammingApplicationCC213/2d_arrays.c",
+		"/home/the-nightphoenix/Desktop/AAST Classes/ProgrammingApplicationCC213/quiz3_solution.c",
+		"/home/the-nightphoenix/Desktop/AAST Classes/ProgrammingApplicationCC213/string_examples.c",
+		"/home/the-nightphoenix/Desktop/AAST Classes/ProgrammingApplicationCC213/strings.c",
+		"/home/the-nightphoenix/Desktop/AAST Classes/ProgrammingApplicationCC213/a.out",
+		"/home/the-nightphoenix/Desktop/CardGameAnalaytics/jacks_analysis.py",
+		"/home/the-nightphoenix/Desktop/SettingUpLamp.txt",
+		"/home/the-nightphoenix/Desktop/new/main.cpp",
+		"/home/the-nightphoenix/Desktop/opencv_tst.cpp",
+		"/home/the-nightphoenix/.compile_opencv.sh",
+		"/home/the-nightphoenix/Desktop/amb.py",
+		"/home/the-nightphoenix/Dropbox/Problem Solving/Google Code Jam/EuroPython 2011/stdout.txt",
+		"/home/the-nightphoenix/Dropbox/Problem Solving/Google Code Jam/EuroPython 2011/centauri_prime.py",
+		"/home/the-nightphoenix/Desktop/AdvancedProgramming/week10/assignments.md",
+		"/home/the-nightphoenix/Desktop/AdvancedProgramming/week10/README.md",
+		"/home/the-nightphoenix/.cache/.fr-A3fDkn/Rana_week10/week_10_1/week_10_1/Class1.cs",
+		"/home/the-nightphoenix/.cache/.fr-3ckhq8/Rana_week10/week_10_2/week_10_2/Form1.cs"
+	],
+	"find":
+	{
+		"height": 36.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"/>",
+			")",
+			"cache_89",
+			"cache_1",
+			"tri",
+			"):\n",
+			"model_anser",
+			"\"\"",
+			"2000",
+			")\n",
+			")))",
+			"i",
+			"pushback",
+			"value",
+			"	",
+			"left",
+			"())",
+			"\n#",
+			"	",
+			"arrays",
+			"[",
+			"1",
+			"]),)",
+			"    \n",
+			"  |  ",
+			"Baucus",
+			"          \n",
+			"    \n",
+			"{}\n",
+			"()",
+			"60",
+			"print quick_find.n",
+			"*.",
+			"accounts_manager",
+			"\n",
+			"    \n",
+			"		        		",
+			"Decimal",
+			"client",
+			";",
+			"print",
+			"row",
+			"\"",
+			"Found",
+			"auto_add",
+			"my_mannager",
+			",",
+			"Source:",
+			"\n",
+			"}",
+			"Client",
+			"date",
+			"    \n",
+			" '",
+			"\n    ",
+			"actions",
+			"):\n",
+			"    ",
+			"# Jelly Legs Curse - Score - 13",
+			"KEY_F",
+			"KEY_T",
+			"uinput.KEY_P",
+			" - ",
+			"	- ",
+			" - ",
+			"\"",
+			"	\"",
+			"\n\"",
+			"\"",
+			"	\"",
+			"\"",
+			"	\"",
+			"  ",
+			"	",
+			"\"",
+			" ",
+			"\"",
+			"def",
+			"\n"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"\n		",
+			"{\n",
+			"},",
+			",},\n",
+			"()",
+			"\n",
+			"\n ",
+			"60",
+			"{%",
+			" '",
+			"',)\n",
+			"\n                          ",
+			"request",
+			"ValueError",
+			"\n        ",
+			"pre_save",
+			"\n    ",
+			"'''",
+			"models",
+			"    \n"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.anypreter":
+	{
+		"height": 120.0
+	},
+	"output.exec":
+	{
+		"height": 197.0
+	},
+	"output.git":
+	{
+		"height": 114.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 223.0,
+	"status_bar_visible": true
+}

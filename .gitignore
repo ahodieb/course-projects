@@ -1,0 +1,7 @@
+*.sublime-project
+*.sublime-workspace
+*.xml
+.idea
+.name
+.iml
+.

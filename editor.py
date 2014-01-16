@@ -1,6 +1,8 @@
+#!/usr/bin/env python
 __author__ = 'Abdallah Hodieb'
 
 import pygtk,gtk,sys
+import masm
 
 class ManoAsm(object):
     def window_destroy(self,widget,data=None):
@@ -42,11 +44,15 @@ class ManoAsm(object):
         start = b.get_start_iter()
         end = b.get_end_iter()
         
-        asm = b.get_text(start,end)
+        asm = b.get_text(start,end).split('\n')
+        # print asm
 
-        f = open('/tmp/manoasm.asm','w')
-        f.write(asm)
-        f.close()
+        a = masm.Assembler(asm)
+        a.generate_symbol_table()
+        a.assemble()
+
+        self.textview2.get_buffer().set_text(a.str_output()[0])
+        print a.str_output()[0]
 
     def __init__(self):
         try:

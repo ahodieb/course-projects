@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 import argparse,re
 
-parser = argparse.ArgumentParser(prog='masm.py',description='Assembler for mano machine instruction set.')
-parser.add_argument('asm_files',nargs='+', help='file name(s)')
-args = parser.parse_args()
+# parser = argparse.ArgumentParser(prog='masm.py',description='Assembler for mano machine instruction set.')
+# parser.add_argument('asm_files',nargs='+', help='file name(s)')
+# args = parser.parse_args()
 
 keywords = '(' + '|'.join([ i.split()[0] for i in open('instruction_set.txt').readlines() if i.split()]) + ')'
 instruction_set = { i.split()[0]:i.split()[2] for i in open('instruction_set.txt').readlines() if len(i.split()) >1 }
@@ -14,6 +14,10 @@ ex1 = r'^\s*(\w{0,3})\s*\,\s*' + keywords + '\s*([-+]?\w*)\s*(I)?\s*(\/?.*)'
 ex2 = r'^\s*(\w{0,3})\s*\,?\s*' + keywords + '\s*([-+]?\w*)\s*(I)?\s*(\/?.*)'
 
 def main():
+
+	parser = argparse.ArgumentParser(prog='masm.py',description='Assembler for mano machine instruction set.')
+	parser.add_argument('asm_files',nargs='+', help='file name(s)')
+	args = parser.parse_args()
 
 	asm = open(args.asm_files[0]).readlines()
 	a = Assembler(asm)
@@ -76,7 +80,7 @@ class Assembler():
 					continue
 
 				elif lable in self.symbol_table.keys():
-					self.errors.append({'msg':'same lable used bfore','line':l[0]+1,'code':'SMLBL','extra':lable})
+					self.errors.append({'msg':'same lable used bfore.','line':l[0]+1,'code':'SMLBL','extra':lable})
 					continue
 
 				self.symbol_table[lable] = l[0] + address_offset - address_start
@@ -135,13 +139,13 @@ class Assembler():
 						break
 
 				else:
-					self.errors.append({'msg':'unknown instruction , ','line':l[0]+1,'code':'UKINS','extra':instruction})
+					self.errors.append({'msg':'unknown instruction. ','line':l[0]+1,'code':'UKINS','extra':instruction})
 
 				self.program[adrr] = {'instruction':instruction,'operand':m.groups()[2],'bin':bin(n)[2:],'hex':hex(n)[2:]}
 			
 
 			else:
-				self.errors.append({'msg':'unknown instruction ','line':l[0]+1,'code':'UKINS','extra':l[1]})
+				self.errors.append({'msg':'unknown instruction.  ','line':l[0]+1,'code':'UKINS','extra':l[1]})
 
 	def str_output(self):
 		data =[]
@@ -155,11 +159,15 @@ class Assembler():
 			data.append(' '.join([str(k),'\t',self.program[k]['hex'].zfill(4).upper(),'\t',self.program[k]['bin'].zfill(16),'\t',self.program[k]['instruction'],'\t'*2,self.program[k]['operand'],'\t']))
 
 		data.append('')
+		if len(self.errors)>0:
 
-		data.append(' '.join(['Error','\t'*4,'Line']))
-		for e in self.errors:
-			data.append(' '.join([e['msg'],'\t'*2,str(e['line'])]))
-
+			data.append(' '.join(['Errors Found : ', str(len(self.errors))]))
+			data.append('')
+			data.append(' '.join(['Error','\t'*4,'Line']))
+			for e in self.errors:
+				data.append(' '.join([e['msg'],e['extra'],'\t'*2,str(e['line'])]))
+		else :
+			data.append(' '.join(['No errors >>> Assembly Successful']))
 
 
 		return ('\n'.join(data),data)

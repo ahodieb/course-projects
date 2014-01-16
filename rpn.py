@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+
+
 op_order    = { '+':0,'-':0, # operator Precedence
 				'*':1,'/':1,'%':1,
 				'^':2,
@@ -55,7 +57,7 @@ def solve(p):
 
 	result_stack = []
 	for v in p:
-		if type(v) is float:
+		if v not in op_order :
 			result_stack.append(v)
 		else:
 			op1 = ''
@@ -69,7 +71,10 @@ def solve(p):
 				op1 = result_stack.pop()
 			else :
 				print 'Expression Error'
-
+			if v == '^':
+				v = "**"
+				op1 = int(op1)
+				op2 = int(op2)
 			r = eval(str(op1) + v + str(op2))
 			result_stack.append(r)
 
@@ -88,6 +93,8 @@ def main():
 	print 'Infix',i
 	print 'Postfix',p
 	print 'Solution',s
+
+	
 	# print 'correct' ,eval(expr)
 	# if s == eval(expr) : print 'correct evaluation.'
 

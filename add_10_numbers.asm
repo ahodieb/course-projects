@@ -1,0 +1,27 @@
+	ORG 100 		/Origin of program is HEX 100
+	LDA ADS
+	STA PTR
+CLZ,CLA
+LOP,ADD PTR I
+	ISZ PTR
+	ISZ CTR
+	BUN LOP
+	STA SUM
+	HLT
+ADS,HEX 150
+PTR,HEX 0
+NBR,DEC -10          / 10 operands
+CTR,HEX 0
+SUM,HEX 0
+	ORG 150			
+DTA,DEC 75			/just for testing
+DTA,DEC 30
+	DEC 50
+	DEC 40
+	DEC 10
+	DEC	33
+	DEC 53
+	DEC 22
+	DEC 94
+	DEC 55
+	END

@@ -1,0 +1,33 @@
+AND , 0 or 8 , And M to AC
+ADD , 1 or 9 , Add M to AC , carry to E
+LDA , 2 or A , Load AC from M
+STA , 3 or B , Store AC in M
+BUN , 4 or C , Branch unconditionally to m
+BSA , 5 or D , Save return address in m and branch to m+1
+ISZ , 6 or E , Increment M and skip if zero
+CLA , 7800   , Clear AC
+CLE , 7400   , Clear E
+CMA , 7200   , Complement AC
+CME , 7100   , Complement E
+CIR , 7080   , Circulate right E and AC
+CIL , 7040   , Circulate left E and AC
+INC , 7020   , Increment AC
+SPA , 7010   , Skip if AC is positve
+SNA , 7008   , Skip if AC is negative
+SZA , 7004   , Skip if AC is zero
+SZE , 7002   , Skip if E is zero
+HLT , 7001   , Halt computer
+INP , F800   , Input information and clear flag
+OUT , F400   , Output information and clear flag
+SKI , F200   , Skip if input flag is on 
+SKO , F100   , Skip if output flag is on 
+ION , F080   , Turn interrupt on
+IOF , F040   , Turn interrupt off
+
+
+ORG
+DEC	
+HEX
+
+END 
+

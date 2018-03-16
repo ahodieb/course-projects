@@ -1,3 +1,5 @@
-#Mano Machine Assembler
+# Mano Machine Assembler
 
-this is a project required in my computer architecture class.
+This is an implementation of an assembler using the instructions set described by [M. Morrise Mano]
+
+(https://en.wikipedia.org/wiki/Mano_machine) in his book. This was an assigned project during **Computer Architecture** course.
